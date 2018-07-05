@@ -1,4 +1,4 @@
-package com.gabi.learnings.jpa.hibernate.jpaDemo.test;
+package com.gabi.learnings.jpa.hibernate.jpaDemo;
 
 import com.gabi.learnings.jpa.hibernate.jpaDemo.JpaDemoApplication;
 import org.junit.Test;

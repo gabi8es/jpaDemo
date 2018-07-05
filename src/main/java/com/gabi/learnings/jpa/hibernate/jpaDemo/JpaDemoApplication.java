@@ -7,6 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Repository;
 
+@SpringBootApplication
 public class JpaDemoApplication implements CommandLineRunner {
 
 	@Autowired
@@ -18,6 +19,9 @@ public class JpaDemoApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-        repository.findByID(10001L);
+        System.out.println( repository.findByID(10001L));
+		//repository.deleteById(10002L);
+
+
 	}
 }
