@@ -19,7 +19,7 @@ public class JpaDemoApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-        System.out.println( repository.findByID(10001L));
+        System.out.println( repository.find_all());
 		//repository.deleteById(10002L);
 
 

@@ -2,12 +2,12 @@ package com.gabi.learnings.jpa.hibernate.jpaDemo.repository;
 
 
 import com.gabi.learnings.jpa.hibernate.jpaDemo.entity.Course;
-import org.hibernate.validator.constraints.pl.REGON;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
+import java.util.List;
 
 @Repository
 @Transactional
@@ -35,6 +35,11 @@ public class CourseRepository {
     public void deleteById(Long id){
         Course course = findByID(id);
         em.remove(course);
+    }
+
+    public List find_all(){
+        List resultList = em.createQuery("Select c From Course c").getResultList();
+        return resultList;
     }
 
 
